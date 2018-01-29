@@ -35,4 +35,6 @@ class Song
   def new_from_filename(f_name)
     song = self.create
     song.name = f_name.match(/- (\w+ *\w+)/)
+    song
+  end
 end
