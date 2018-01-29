@@ -30,10 +30,6 @@ class Song
     find_by_name(name) ? find_by_name(name) : create_by_name(name)
   end
   def self.alphabetical
-    alph_array = []
-    self.all.each do |key, value|
-      alph_array << value
-    end
-    alph_array.sort
+    self.all.sort_by { |key, value| value}    
   end
 end
