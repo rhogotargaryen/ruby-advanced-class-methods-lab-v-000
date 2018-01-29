@@ -31,7 +31,7 @@ class Song
   end
   def self.alphabetical
     alph_array = []
-    self.all.map do |key, value|
+    self.all.each do |key, value|
       alph_array << value
     end
     alph_array.sort
