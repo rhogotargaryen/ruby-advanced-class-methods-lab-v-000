@@ -30,8 +30,7 @@ class Song
     find_by_name(name) ? find_by_name(name) : create_by_name(name)
   end
   def self.alphabetical
-    @@all.sort do |song_1, song_2|
-      puts "#{song_1} and #{song_2}"
+    @@all.sort_by { |key, value| value }
     end
   end
 end
