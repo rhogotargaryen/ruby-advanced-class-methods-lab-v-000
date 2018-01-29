@@ -21,9 +21,13 @@ class Song
     song
   end
   def self.find_by_name(name)
-    @@all.find { |song| name == song.name ? song : false }
+    @@all.find { |song| name == song.name ? song : return false }
   end
   def save
     self.class.all << self
+  end
+  def self.find_or_create_by_name(name)
+    find_by_name(name)
+    create_by_name(name)
   end
 end
