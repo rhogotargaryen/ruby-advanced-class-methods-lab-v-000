@@ -33,5 +33,6 @@ class Song
     @@all.sort_by { |obj| obj.name }
   end
   def new_from_filename(f_name)
-    f_name.match(/- (\w+ *\w+)/)
+    song = self.create
+    song.name = f_name.match(/- (\w+ *\w+)/)
 end
