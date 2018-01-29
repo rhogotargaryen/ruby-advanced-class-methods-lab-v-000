@@ -24,7 +24,6 @@ class Song
   def self.find_by_name(name)
     @@all.find { |song| if name == song.name ? song : false }
   end
-
   def save
     self.class.all << self
   end
